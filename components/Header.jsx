@@ -17,8 +17,8 @@ const Header = () => {
   const router = useRouter();
   return (
     <header className="sticky bg-[#040714] top-0 z-[1000] flex items-center px-10 h-[72px] md:px-12">
-      <Link href="/">
-        <Image src="/images/logo.svg" width={80} height={80} />
+      <Link href={"/"}>
+        <Image src="/images/logo-2.svg" width={400} height={100} />
       </Link>
       {session && (
         <div className="hidden ml-10  md:flex items-center space-x-6">
