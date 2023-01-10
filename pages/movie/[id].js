@@ -15,7 +15,7 @@ const Movie = ({ result }) => {
   const router = useRouter();
 
   useEffect(() => {
-    if (session) {
+    if (!session) {
       router.push("/");
     }
   }, []);
