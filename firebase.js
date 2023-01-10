@@ -1,9 +1,10 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore/lite";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAzRN22QPCks-jTImBHC_Vg7mAFICkn-6g",
   authDomain: "ottplatform-ba86d.firebaseapp.com",
+  databaseURL: "https://ottplatform-ba86d-default-rtdb.firebaseio.com",
   projectId: "ottplatform-ba86d",
   storageBucket: "ottplatform-ba86d.appspot.com",
   messagingSenderId: "531674227274",
@@ -11,6 +12,6 @@ const firebaseConfig = {
 };
 
 export const app = initializeApp(firebaseConfig);
-const db = getFirestore(db);
+const db = getFirestore(app);
 
 export { db };
