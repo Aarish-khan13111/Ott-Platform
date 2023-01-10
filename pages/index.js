@@ -19,7 +19,7 @@ const Index = ({
     <div>
       <Head>
         <Link href="/">
-          <title>Disney+</title>
+          <title>MoviesInfo+</title>
         </Link>
       </Head>
       <Header />
