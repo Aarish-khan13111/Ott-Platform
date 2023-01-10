@@ -1,6 +1,5 @@
 import { getSession, useSession } from "next-auth/react";
 import Head from "next/head";
-import Link from "next/link";
 import Brand from "../components/Brand";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -14,16 +13,14 @@ const Index = ({
   popularShows,
   topRatedShows,
 }) => {
-  const { data: session } = useSession;
+  const { data: session } = useSession();
   return (
     <div>
       <Head>
-        <Link href="/">
-          <title>MoviesInfo+</title>
-        </Link>
+        <title>MoviesInfo+</title>
       </Head>
       <Header />
-      {session ? (
+      {!session ? (
         <Hero />
       ) : (
         <section className="relative min-h-screen after:bg-home after:bg-center after:bg-cover after:bg-no-repeat after:bg-fixed after:absolute after:inset-0 after:z-[-1]">
