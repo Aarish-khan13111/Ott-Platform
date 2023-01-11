@@ -8,7 +8,7 @@ import Hero from "../../components/Hero";
 import { PlusIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import ReactPlayer from "react-player";
 
-const Movie = ({ result }) => {
+const Show = ({ result }) => {
   const { data: session } = useSession();
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
   const [showPlayer, setShowPlayer] = useState(false);
@@ -120,7 +120,7 @@ export async function getServerSideProps(context) {
   const session = await getSession(context);
   const { id } = context.query;
   const request = await fetch(
-    `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.API_KEY}&language=en-US&append_to_response=videos,images`
+    `https://api.themoviedb.org/3/tv/${id}?api_key=${process.env.API_KEY}&language=en-US&append_to_response=videos,images`
   ).then((Response) => Response.json());
   return {
     props: {
@@ -130,4 +130,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default Movie;
+export default Show;

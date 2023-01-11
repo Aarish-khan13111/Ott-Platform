@@ -17,15 +17,15 @@ const Header = () => {
   const router = useRouter();
   return (
     <header className="sticky bg-[#040714] top-0 z-[1000] flex items-center px-10 h-[72px] md:px-12">
-      <Link href={"/"}>
-        <Image src="/images/logo-2.svg" width={400} height={100} />
+      <Link href="/">
+        <Image src="/images/logo-2.svg" width={300} height={100} />
       </Link>
       {session && (
-        <div className="hidden ml-10  md:flex items-center space-x-6">
-          <a className="header-link group">
+        <div className="hidden ml-10 md:flex items-center space-x-6">
+          <Link href="/" className="header-link group">
             <HomeIcon className="h-4" />
             <span className="span">Home</span>
-          </a>
+          </Link>
           <a className="header-link group">
             <MagnifyingGlassIcon className="h-4" />
             <span className="span">Search</span>
@@ -38,14 +38,14 @@ const Header = () => {
             <StarIcon className="h-4" />
             <span className="span">Orignals</span>
           </a>
-          <a className="header-link group">
+          <Link href="/movies/" className="header-link group">
             <VideoCameraIcon className="h-4" />
             <span className="span">Movies</span>
-          </a>
-          <a className="header-link group">
+          </Link>
+          <Link href="/series/" className="header-link group">
             <TvIcon className="h-4" />
             <span className="span">Series</span>
-          </a>
+          </Link>
         </div>
       )}
       {!session ? (
