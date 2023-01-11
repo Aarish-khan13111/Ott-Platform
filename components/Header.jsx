@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header className="sticky bg-[#040714] top-0 z-[1000] flex items-center px-10 h-[72px] md:px-12">
       <Link href="/">
-        <Image src="/images/logo-2.svg" width={300} height={100} />
+        <Image src="/images/logo-2.svg" width={350} height={100} />
       </Link>
       {session && (
         <div className="hidden ml-10 md:flex items-center space-x-6">
