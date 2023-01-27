@@ -51,15 +51,16 @@ const Header = () => {
       {!session ? (
         <button
           onClick={signIn}
-          className="ml-auto uppercase border px-4 py-1.5 rounded font-medium tracking-wide hover:bg-white hover:text-black transi duration-200">
+          className="ml-auto uppercase border px-4 py-1.5 rounded font-medium tracking-wide hover:bg-white hover:text-black transi duration-200"
+        >
           Login
         </button>
       ) : (
         <img
           className="ml-auto h-12 w-12 rounded-full object-cover cursor-pointer"
-          src={session.user.image}
-          width={10}
-          height={10}
+          src={session?.user.image}
+          width="10"
+          height="10"
           alt=""
           onClick={signOut}
         />
